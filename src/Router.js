@@ -1,25 +1,25 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-// 유량 컴포넌트
-import LoginRyang from './pages/kimyuryang/Login/Login';
-import MainRyang from './pages/kimyuryang/Main/Main';
+//정빈 컴포넌트
+import LoginBin from './pages/hongjeongbin/LoginBin/LoginBin';
+import MainBin from './pages/hongjeongbin/MainBin/MainBin';
 
 //유진 컴포넌트
-import LoginJin from './pages/hongyoujin/Login/Login';
-import MainJin from './pages/hongyoujin/Main/Main';
-
-//예슬 컴포넌트
-import LoginSeul from './pages/kimyaeseul/Login/Login';
-import MainSeul from './pages/kimyaeseul/Main/Main';
+import LoginJin from './pages/hongyoujin/LoginJin/LoginJin';
+import MainJin from './pages/hongyoujin/MainJin/MainJin';
 
 //재호 컴포넌트
-import LoginHo from './pages/kimjaeho/Login/Login';
-import MainHo from './pages/kimjaeho/Main/Main';
+import LoginHo from './pages/kimjaeho/LoginHo/LoginHo';
+import MainHo from './pages/kimjaeho/MainHo/MainHo';
 
-//정빈 컴포넌트
-import LoginBin from './pages/hongjeongbin/Login/Login';
-import MainBin from './pages/hongjeongbin/Main/Main';
+//예슬 컴포넌트
+import LoginSeul from './pages/kimyaeseul/LoginSeul/LoginSeul';
+import MainSeul from './pages/kimyaeseul/MainSeul/MainSeul';
+
+// 유량 컴포넌트
+import LoginRyang from './pages/kimyuryang/LoginRyang/LoginRyang';
+import MainRyang from './pages/kimyuryang/MainRyang/MainRyang';
 
 // router path
 
