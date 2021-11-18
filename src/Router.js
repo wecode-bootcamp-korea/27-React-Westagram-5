@@ -28,20 +28,20 @@ function Router() {
     <BrowserRouter>
       <Routes>
         {/* //유량 */}
-        <Route path="/loginRyang" element={<LoginRyang />} />
-        <Route path="/mainRyang" element={<MainRyang />} />
+        <Route path="/login-ryang" element={<LoginRyang />} />
+        <Route path="/main-ryang" element={<MainRyang />} />
         {/* //유진 */}
-        <Route path="/loginJin" element={<LoginJin />} />
-        <Route path="/mainJin" element={<MainJin />} />
+        <Route path="/login-jin" element={<LoginJin />} />
+        <Route path="/main-jin" element={<MainJin />} />
         {/* //예슬 */}
-        <Route path="/loginSeul" element={<LoginSeul />} />
-        <Route path="/mainSeul" element={<MainSeul />} />
+        <Route path="/login-seul" element={<LoginSeul />} />
+        <Route path="/main-seul" element={<MainSeul />} />
         {/* //재호 */}
-        <Route path="/loginHo" element={<LoginHo />} />
-        <Route path="/mainHo" element={<MainHo />} />
+        <Route path="/login-ho" element={<LoginHo />} />
+        <Route path="/main-ho" element={<MainHo />} />
         {/* //정빈 */}
-        <Route path="/loginBin" element={<LoginBin />} />
-        <Route path="/mainBin" element={<MainBin />} />
+        <Route path="/login-bin" element={<LoginBin />} />
+        <Route path="/main-bin" element={<MainBin />} />
       </Routes>
     </BrowserRouter>
   );

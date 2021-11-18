@@ -1,0 +1,14 @@
+@mixin flex-center($flex-direction: center, $justify-content: center) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: center;
+  justify-content: $justify-content;
+}
+
+$background-color: rgba(250, 250, 250, 0.5);
+
+$border: 0.2px solid rgba(210, 210, 210, 0.7);
+
+$font-size: 14px;
+
+$font-family: “Lobster”, cursive;
