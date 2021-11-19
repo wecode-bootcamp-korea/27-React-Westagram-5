@@ -1,6 +1,7 @@
 @import '../../../styles/variables.scss';
 
 .Login {
+  margin: 100px 0;
   @include flex-center;
   &__Aside {
     width: 454px;

@@ -2,10 +2,12 @@ import React from 'react';
 // import { Link } from "react-router-dom";
 // import logo from "./logo.svg";
 import '../MainJin/MainJin.scss';
+import Nav from '../../../components/Nav/Nav';
 
 function MainJin() {
   return (
     <div className="Main">
+      <Nav />
       <div className="Main__total">
         <StoryBox />
         <Feed />
