@@ -1,0 +1,71 @@
+@import '../../styles/variables.scss';
+
+.Nav {
+  width: 100vw;
+  height: 54px;
+  background-color: white;
+  border-bottom: 0.2px solid rgba(210, 210, 210, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  &__bar {
+    width: 935px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__logo {
+        width: 360px;
+        height: 30px;
+        font-family: 'Lobster', cursive;
+        font-size: 22px;
+        margin-top: 8px;
+      }
+      &__search {
+        width: 215px;
+        height: 28px;
+        position: relative;
+        &__input {
+          position: relative;
+          width: 215px;
+          height: 28px;
+          padding: 3px 10px 3px 26px;
+          border: 0.4px solid rgba(210, 210, 210, 0.8);
+          background-color: #fafafa;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+    &__menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &__icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 244px;
+        margin: 2px 0 0 24px;
+        font-size: 22px;
+        // .fas {
+        // }
+        &__img {
+          width: 24px;
+          height: 24px;
+          margin-top: 4px;
+          border: 0.2px solid rgba(210, 210, 210, 0.7);
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+}
