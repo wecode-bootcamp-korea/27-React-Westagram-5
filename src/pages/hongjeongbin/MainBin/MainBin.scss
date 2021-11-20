@@ -1,0 +1,227 @@
+@import '../../../styles/variables.scss';
+
+.main {
+  #all {
+    display: flex;
+    justify-content: center;
+  }
+
+  // /* nav */
+  // #navBar {
+  //   position: fixed;
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   top: 0px;
+  //   width: 975px;
+  //   height: 54px;
+  //   background-color: #ffffff;
+  // }
+
+  // a:hover {
+  //   cursor: pointer;
+  // }
+
+  // /* nav - 아이콘 묶음(시작) */
+  // .navBarPackage {
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
+
+  // .navCamera {
+  //   width: 22px;
+  //   height: 22px;
+  // }
+
+  // .navInstagram {
+  //   width: 103px;
+  //   height: 25px;
+  //   margin-left: 2px;
+  // }
+
+  // .navExplore {
+  //   width: 22px;
+  //   height: 22px;
+  // }
+
+  // .navHeart {
+  //   width: 22px;
+  //   height: 22px;
+  //   margin-left: 12px;
+  // }
+
+  // .navProfile {
+  //   width: 22px;
+  //   height: 22px;
+  //   margin-left: 12px;
+  // }
+  // /* nav 아이콘 묶음(완료) */
+
+  /* main */
+  #mainPage {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 54px;
+    background-color: #fafafa;
+  }
+
+  /* main - feeds */
+  #feeds {
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 4px;
+    margin-top: 83.2px;
+    margin-right: 30px;
+  }
+
+  .feedsHeader {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: #ffffff;
+  }
+
+  .headerIcon {
+    margin-left: 15px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .headerUserName {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+
+  .articleImage {
+    width: 614px;
+  }
+
+  .commentHeart {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+  }
+
+  .isLiked {
+    background-color: red;
+  }
+
+  .feedsLike {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .textIcon {
+    margin-left: 15px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .boldText {
+    margin-left: 5px;
+    font-weight: 900;
+  }
+
+  .feedsText {
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .commentsList {
+    list-style: none;
+  }
+
+  /****** '댓글 달기...' (시작) ******/
+  .inputComment {
+    padding-left: 15px;
+    width: 565px;
+    height: 40px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .inputComment::placeholder {
+    color: rgb(150, 150, 150);
+  }
+  /****** '댓글 달기...' (끝) ******/
+
+  /****** '게시' 버튼 (시작) ******/
+  .enterComment {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(150, 220, 241);
+    border: none;
+    background-color: #fafafa;
+    cursor: pointer;
+  }
+
+  /****** '게시' 버튼 (끝) ******/
+
+  /* main - mainRight */
+  #FixedrightSection {
+    /* position: fixed; */
+  }
+
+  .rightSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 53.2px;
+  }
+
+  .mainRightLoginUser {
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+    margin-bottom: 20px;
+  }
+
+  .mainRightIcon {
+    width: 60px;
+    margin-right: 15px;
+    margin-left: 5px;
+  }
+
+  .mainRightUser {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .mainRightStory {
+    width: 340px;
+    height: 275px;
+    background-color: #ffffff;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 4px;
+  }
+
+  .story {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 5px;
+  }
+
+  .storyIcon {
+    width: 22px;
+    margin-right: 5px;
+  }
+
+  .stryId {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .comment {
+    font-size: 14px;
+  }
+}

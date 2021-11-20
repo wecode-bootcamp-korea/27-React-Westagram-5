@@ -1,0 +1,77 @@
+$borderStyle: 1px solid rgb(219, 219, 219);
+$guideTextStyle: rgb(150, 150, 150);
+
+@mixin loginBar {
+  text-align: start;
+  width: 266px;
+  height: 36px;
+  border: $borderStyle;
+  background-color: rgb(250, 250, 250);
+  font-size: 12px;
+  border-radius: 4px;
+  padding: 9px 0px 7px 8px;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  background-color: #fafafa;
+
+  .loginBox {
+    text-align: center;
+    width: 350px;
+    height: 380px;
+    border: $borderStyle;
+    border-radius: 1px;
+    background-color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  .logo {
+    width: 175px;
+    height: 51px;
+    margin: 22px 86.5px 12px;
+  }
+
+  .loginId {
+    @include loginBar;
+
+    &:placeholder {
+      color: $guideTextStyle;
+    }
+  }
+
+  .loginPassword {
+    @include loginBar;
+    margin-top: 5px;
+
+    &:placeholder {
+      color: $guideTextStyle;
+    }
+  }
+
+  .loginBtn {
+    display: block;
+    width: 268px;
+    height: 29.6px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #0095f6;
+    border-style: none;
+    border-radius: 4px;
+    opacity: 0.3;
+    margin: 8px 40px;
+  }
+
+  .forgotPassword {
+    display: inline-block;
+    margin-top: 80px;
+    color: #00376b;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
