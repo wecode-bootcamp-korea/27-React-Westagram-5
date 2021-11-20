@@ -6,73 +6,37 @@ function MainBin() {
   return (
     <div className="main">
       <Nav />
-      <div id="all">
-        {/* <nav id="navBar">
-          <div className="navBarPackage">
-            <div>
-              <a>
-                <img
-                  src="/images/hongjeongbin/instagram.png"
-                  className="navCamera"
-                />
-              </a>
-              <a>
-                <img
-                  src="/images/hongjeongbin/logo.jpg"
-                  className="navInstagram"
-                />
-              </a>
-            </div>
-
-            <div className="navIconPackage">
-              <a>
-                <img
-                  src="/images/hongjeongbin/explore.png"
-                  className="navExplore"
-                />
-                <img
-                  src="/images/hongjeongbin/heart.png"
-                  className="navHeart"
-                />
-                <img
-                  src="/images/hongjeongbin/profile.png"
-                  className="navProfile"
-                />
-              </a>
-            </div>
-          </div>
-        </nav> */}
+      <div id="mainContainer">
+        {/* 개인 nav코드 삭제 */}
 
         <main id="mainPage" />
 
         <div id="feeds">
-          <header>
-            <div className="feedsHeader">
-              <img
-                src="/images/hongjeongbin/user-icon.jpg"
-                className="headerIcon"
-              />
-              <span className="headerUserName">bin_123</span>
-            </div>
-          </header>
-
-          <article className="article" />
-          <img
-            src="/images/hongjeongbin/feeds-image.jpg"
-            className="articleImage"
-          />
-
-          <div className="articleComment" />
-          <img src="/images/hongjeongbin/heart.png" class="commentHeart" />
-
-          <div className="feedsLike">
+          <div className="feedsHeader">
             <img
               src="/images/hongjeongbin/user-icon.jpg"
-              className="textIcon"
+              className="feedsHeaderIcon"
             />
-            <span className="nomalText">
-              <span className="boldText">hong_123</span>님{' '}
-              <span className="boldText">외 10명</span>이 좋아합니다.
+            <span className="feedsHeaderUserName">bin_123</span>
+          </div>
+
+          <article className="feedsArticle" />
+          <img
+            src="/images/hongjeongbin/feeds-image.jpg"
+            className="feedsArticleImage"
+          />
+
+          <div className="feedsComment" />
+          <img src="/images/hongjeongbin/heart.png" class="feedCommentHeart" />
+
+          <div className="feedsTextLike">
+            <img
+              src="/images/hongjeongbin/user-icon.jpg"
+              className="feedsTextIcon"
+            />
+            <span className="feedsTextNomal">
+              <span className="feedsTextBold">hong_123</span>님
+              <span className="feedsTextBold">외 10명</span>이 좋아합니다.
             </span>
           </div>
 
@@ -81,65 +45,64 @@ function MainBin() {
           <div className="commentSection">
             <input
               type="text"
-              className="inputComment"
+              className="inputFeedsComment"
               placeholder="댓글 달기..."
             />
             <span>
-              {' '}
-              <button className="enterComment">게시</button>
+              <button className="enterFeedsComment">게시</button>
             </span>
           </div>
         </div>
 
         <div id="FixedrightSection">
           <div className="rightSection">
-            <div className="mainRightLoginUser">
+            <div className="rightSectionLoginUser">
               <img
                 src="/images/hongjeongbin/user-icon.jpg"
-                className="mainRightIcon"
+                className="rightSectionLoginUserIcon"
               />
-              <span className="mainRightUser">bin_123</span>
+              <span className="rightSectionLoginUserId">bin_123</span>
             </div>
 
-            <div className="mainRightStory">
-              <div className="story">
+            <div className="rightSectionStoryContainer">
+              <div className="rightSectionStory">
                 <img
                   src="/images/hongjeongbin/user-icon.jpg"
-                  className="storyIcon"
+                  className="rightSectionStoryIcon"
                 />
-                <span className="stryId">hello_123</span>
+                <span className="rightSectionStoryId">hello_123</span>
               </div>
 
-              <div className="story">
+              <div className="rightSectionStory ">
                 <img
                   src="/images/hongjeongbin/user-icon.jpg"
-                  className="storyIcon"
+                  className="rightSectionStoryIcon"
                 />
-                <span className="stryId">he__llo_45</span>
+                <span className="rightSectionStoryId">he__llo_45</span>
               </div>
 
-              <div className="story">
+              <div className="rightSectionStory">
                 <img
                   src="/images/hongjeongbin/user-icon.jpg"
-                  className="storyIcon"
+                  className="rightSectionStoryIcon"
                 />
-                <span className="stryId">hello0012</span>
+                <span className="rightSectionStoryId">hello0012</span>
               </div>
 
-              <div className="story">
+              <div className="rightSectionStory">
                 <img
                   src="/images/hongjeongbin/user-icon.jpg"
-                  className="storyIcon"
+                  className="rightSectionStoryIcon"
                 />
-                <span className="stryId">h_ii_123</span>
+                <span className="rightSectionStoryId">h_ii_123</span>
               </div>
 
-              <div className="story">
+              <div className="rightSectionStory">
                 <img
                   src="/images/hongjeongbin/user-icon.jpg"
-                  className="storyIcon"
+                  className="rightSectionStoryIcon"
                 />
-                <span className="stryId">hello_123__</span>
+                <span className="rightSectionStoryId">hello_123__</span>
               </div>
             </div>
           </div>

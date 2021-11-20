@@ -37,7 +37,6 @@ $guideTextStyle: rgb(150, 150, 150);
 
   .loginId {
     @include loginBar;
-
     &:placeholder {
       color: $guideTextStyle;
     }
@@ -46,7 +45,6 @@ $guideTextStyle: rgb(150, 150, 150);
   .loginPassword {
     @include loginBar;
     margin-top: 5px;
-
     &:placeholder {
       color: $guideTextStyle;
     }
