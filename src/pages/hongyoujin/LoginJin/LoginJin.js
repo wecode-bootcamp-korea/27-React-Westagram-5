@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // import logo from "./logo.svg";
 import '../LoginJin/LoginJin.scss';
-// import "@fortawesome/fontawesome-svg-core";
 
 function LoginJin() {
   return (
@@ -12,6 +11,7 @@ function LoginJin() {
     </div>
   );
 }
+
 function Aside() {
   return (
     <aside className="Login__Aside">
@@ -25,6 +25,7 @@ function Aside() {
     </aside>
   );
 }
+
 function Article() {
   return (
     <article className="Login__Article">
@@ -34,13 +35,23 @@ function Article() {
     </article>
   );
 }
+
 function LoginBox() {
+  const [idValue, setIdValue] = useState('');
+  const [pwValue, setPwValue] = useState('');
+
+  const handleIdInput = event => {
+    setIdValue(event.target.value);
+  };
+  const handlePwInput = event => {
+    setPwValue(event.target.value);
+  };
+
   const Navigate = useNavigate();
 
   const goToMain = () => {
     Navigate('/main');
   };
-
   return (
     <div className="Login__Article__login-box">
       <h1 className="Login__Article__login-box__logo">Westagram</h1>
@@ -49,11 +60,13 @@ function LoginBox() {
           className="Login__Article__login-box__form__input"
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
+          onChange={handleIdInput}
         />
         <input
           className="Login__Article__login-box__form__input"
           type="password"
           placeholder="비밀번호"
+          onChange={handlePwInput}
         />
         <button
           type="submit"
