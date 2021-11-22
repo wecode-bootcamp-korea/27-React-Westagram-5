@@ -1,0 +1,109 @@
+.Loginho {
+  padding-left: 200px;
+  .my-box {
+    width: 370px;
+    height: 450px;
+
+    margin-left: 30%;
+    margin-top: 5%;
+    border: 1px solid rgb(192, 187, 187);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .img-box img {
+      width: 250px;
+      height: 100px;
+      display: block;
+      margin: 0px auto;
+    }
+
+    .wrap {
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      .login {
+        margin-top: 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        input {
+          width: 300px;
+          height: 50px;
+          border-radius: 10px;
+          margin-top: 10px;
+          padding: 0px 20px;
+          border: 1px solid rgb(192, 187, 187);
+          outline: none;
+          // transform: translate(75%, 20%);
+        }
+      }
+      .button-box {
+        .btn {
+          color: white;
+          font-size: 15px;
+          font-weight: bold;
+          background-color: #bfdffd;
+          width: 300px;
+          height: 40px;
+          border: 0;
+          outline: none;
+          border-radius: 10px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .sns {
+        a {
+          display: flex;
+        }
+        i {
+          margin-right: 10px;
+          margin-top: 5px;
+        }
+        .face {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 20px;
+          cursor: pointer;
+          color: rgb(86, 86, 236);
+          font-weight: 400;
+        }
+      }
+      .forget {
+        font-size: 15px;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .create {
+    width: 370px;
+    height: 10%;
+    box-sizing: border-box;
+    margin-left: 30%;
+    margin-top: 3%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(192, 187, 187);
+    padding: 10px;
+  }
+  .create {
+    span {
+      color: rgb(81, 81, 236);
+      font-size: 15px;
+      cursor: pointer;
+      font-weight: 200;
+    }
+  }
+}

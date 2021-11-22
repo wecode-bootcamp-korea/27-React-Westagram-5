@@ -12,7 +12,8 @@ import MainJin from './pages/hongyoujin/MainJin/MainJin';
 //재호 컴포넌트
 import LoginHo from './pages/kimjaeho/LoginHo/LoginHo';
 import MainHo from './pages/kimjaeho/MainHo/MainHo';
-
+import Parents from './Parents/Parents';
+import Child from './Child/Child';
 //예슬 컴포넌트
 import LoginSeul from './pages/kimyaeseul/LoginSeul/LoginSeul';
 import MainSeul from './pages/kimyaeseul/MainSeul/MainSeul';
@@ -39,6 +40,8 @@ function Router() {
         {/* //재호 */}
         <Route path="/login-ho" element={<LoginHo />} />
         <Route path="/main-ho" element={<MainHo />} />
+        <Route path="/child" element={<Child />} />
+        <Route path="/parents" element={<Parents />} />
         {/* //정빈 */}
         <Route path="/login-bin" element={<LoginBin />} />
         <Route path="/main-bin" element={<MainBin />} />
