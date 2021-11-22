@@ -1,0 +1,60 @@
+@import '../../../styles/variables.scss';
+
+.Login {
+  text-align: center;
+  margin: auto;
+  width: 700px;
+  height: 750px;
+  transform: translateY(25%);
+  border: 3px solid #d3d3d379;
+
+  .logoSection {
+    text-align: center;
+    height: 230px;
+    width: auto;
+    display: inline-block;
+  }
+
+  h1 {
+    @include flex-center;
+    font-family: $font-family;
+    font-size: 90px;
+    font-weight: lighter;
+  }
+
+  .loginForm {
+    input {
+      height: 80px;
+      width: 535px;
+      margin-bottom: 10px;
+      padding-left: 25px;
+      background-color: hsla(0, 0%, 95%, 0.8);
+      border: $border;
+      border-radius: 2px;
+      font-size: 25px;
+    }
+
+    .placeholder {
+      color: #36363679;
+    }
+  }
+
+  #login {
+    width: 535px;
+    height: 60px;
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 20px 0 190px 0;
+    color: white;
+    background-color: #c4e1fb;
+    border-radius: 6px;
+    border-style: none;
+  }
+
+  .forgetIdSection {
+    .forgetId > a {
+      font-size: 25px;
+      color: #1b4776;
+    }
+  }
+}

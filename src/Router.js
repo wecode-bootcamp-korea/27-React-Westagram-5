@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Nav from './components/Nav/Nav';
 
 //정빈 컴포넌트
 import LoginBin from './pages/hongjeongbin/LoginBin/LoginBin';
@@ -26,6 +27,7 @@ import MainRyang from './pages/kimyuryang/MainRyang/MainRyang';
 function Router() {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         {/* //유량 */}
         <Route path="/login-ryang" element={<LoginRyang />} />
