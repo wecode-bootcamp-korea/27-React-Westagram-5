@@ -65,7 +65,7 @@
           }
         }
 
-        &__btn {
+        &__btnOff {
           width: 268px;
           height: 30px;
           border: none;
@@ -76,6 +76,18 @@
           font-weight: bold;
           margin: 12px 0;
           /* cursor:inherit; */
+        }
+        &__btnOn {
+          width: 268px;
+          height: 30px;
+          border: none;
+          border-radius: 3px;
+          // background-color: rgba(0, 147, 245, 0.3);
+          background-color: rgb(0, 147, 245);
+          color: white;
+          font-weight: bold;
+          margin: 12px 0;
+          cursor: pointer;
         }
       }
       &__option {

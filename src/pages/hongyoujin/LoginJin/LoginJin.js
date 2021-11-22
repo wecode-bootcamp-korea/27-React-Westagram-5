@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // import logo from "./logo.svg";
@@ -46,11 +48,10 @@ function LoginBox() {
   const handlePwInput = event => {
     setPwValue(event.target.value);
   };
-
   const Navigate = useNavigate();
 
   const goToMain = () => {
-    Navigate('/main');
+    Navigate('/main-jin');
   };
   return (
     <div className="Login__Article__login-box">
@@ -70,9 +71,13 @@ function LoginBox() {
         />
         <button
           type="submit"
-          className="Login__Article__login-box__form__btn"
+          className={
+            idValue.includes('@') && pwValue.length > 4
+              ? 'Login__Article__login-box__form__btnOn'
+              : 'Login__Article__login-box__form__btnOff'
+          }
           onClick={goToMain}
-          disabled
+          disabled={idValue.includes('@') && pwValue.length > 4 ? false : true}
         >
           로그인
         </button>
