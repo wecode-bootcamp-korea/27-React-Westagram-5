@@ -13,6 +13,7 @@ function LoginSeul() {
   const handlePwInput = e => {
     setinputPwText(e.target.value);
   };
+
   return (
     <div className="loginContainer">
       <div className="LoginSeul">
@@ -34,11 +35,14 @@ function LoginSeul() {
         />
 
         <input
-          id="button"
+          className={
+            inputIdText.includes('@') && inputPwText.length >= 5
+              ? 'activeButton'
+              : 'unactiveButton'
+          }
           disabled
           type="button"
           value="로그인"
-          // onClick={changeColor}
         />
         <div className="passwordFind">
           <i className="fab fa-facebook-square fa-2x" />
@@ -52,5 +56,3 @@ function LoginSeul() {
 }
 
 export default LoginSeul;
-
-//조건부 렌더링...꼭 알아두기

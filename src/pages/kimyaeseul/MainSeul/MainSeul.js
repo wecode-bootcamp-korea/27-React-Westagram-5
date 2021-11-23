@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './MainSeul.scss';
 import Nav from '../../../components/Nav/Nav';
 // import { useNavigate } from 'react-router-dom';
