@@ -1,0 +1,69 @@
+@import '../../../styles/variables.scss';
+
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+
+  .LoginSeul {
+    border: 1px solid #dbdbdb;
+    width: 350px;
+    height: 400px;
+
+    h1 {
+      font-family: $font-family;
+      font-weight: 50px;
+      font-size: 50px;
+      margin-bottom: 40px;
+      margin-top: 30px;
+    }
+
+    input {
+      width: 259px;
+      height: 45px;
+      padding: 8px 0px 7px 8px;
+      margin: 3px;
+      border: 1px solid #dbdbdb;
+      border-radius: 3px;
+    }
+    #button {
+      background-color: #0095f6;
+      border: none;
+      border-radius: 5px;
+      width: 300px;
+      height: 35px;
+      color: white;
+      font-size: 15px;
+      margin-top: 35px;
+    }
+
+    #button:disabled {
+      background-color: #b2dffc;
+    }
+  }
+  .passwordFind {
+    font-size: 12px;
+    color: black;
+    margin-top: 18px;
+    padding: 8px;
+
+    .facebooklink {
+      font-size: 14px;
+      font-weight: bolder;
+      margin: 5px;
+      margin-bottom: 10px;
+      color: #385185;
+      text-decoration: none;
+    }
+  }
+}
+
+.activeButton {
+  background-color: #0095f6;
+}
+
+.unactiveButton {
+  background-color: #b2dffc;
+}
