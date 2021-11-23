@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
 //import React from 'react';
 import './LoginHo.scss';
-
+import { useNavigate } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
 function LoginHo() {
+  const navigate = useNavigate();
+
+  const goToMain = () => {
+    navigate('/main-Ho');
+  };
   const [idInput, setIdInput] = useState('');
   const [PWInput, setPassWordInput] = useState('');
 
@@ -40,9 +45,20 @@ function LoginHo() {
             />
           </div>
           <div className="button-box">
-            <button type="button" className="btn" disabled="disabled">
-              로그인
-            </button>
+            {idInput.includes('@') && PWInput.length >= 5 ? (
+              <button
+                type="button"
+                className="btn"
+                onClick={goToMain}
+                disabled={false}
+              >
+                로그인
+              </button>
+            ) : (
+              <button type="button" className="btn" disabled={true}>
+                로그인
+              </button>
+            )}
           </div>
 
           <div className="sns">
