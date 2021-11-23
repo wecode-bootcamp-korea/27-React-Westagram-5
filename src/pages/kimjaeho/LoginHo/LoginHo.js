@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+//import React from 'react';
 import './LoginHo.scss';
+
 // import { Link } from 'react-router-dom';
 
 function LoginHo() {
+  const [idInput, setIdInput] = useState('');
+  const [PWInput, setPassWordInput] = useState('');
+
+  const handleIdInput = event => {
+    setIdInput(event.target.value);
+  };
+
+  const handlePWInput = event => {
+    setPassWordInput(event.target.value);
+  };
+
   return (
     <div className="Loginho">
       <div className="my-box">
@@ -12,12 +25,19 @@ function LoginHo() {
         <div className="wrap">
           <div className="login">
             <input
+              onChange={handleIdInput}
               type="text,number,email"
               name=""
               id="id"
               placeholder="전화번호,사용자 이름 및 이메일 "
             />
-            <input type="password" name="" id="pw" placeholder="비밀번호" />
+            <input
+              onChange={handlePWInput}
+              type="password"
+              name=""
+              id="pw"
+              placeholder="비밀번호"
+            />
           </div>
           <div className="button-box">
             <button type="button" className="btn" disabled="disabled">
