@@ -39,6 +39,7 @@ function Router() {
         {/* //재호 */}
         <Route path="/login-ho" element={<LoginHo />} />
         <Route path="/main-ho" element={<MainHo />} />
+
         {/* //정빈 */}
         <Route path="/login-bin" element={<LoginBin />} />
         <Route path="/main-bin" element={<MainBin />} />
