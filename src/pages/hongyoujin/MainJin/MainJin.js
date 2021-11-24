@@ -1,8 +1,10 @@
-import React from 'react';
-// import { Link } from "react-router-dom";
-// import logo from "./logo.svg";
+/* eslint-disable */
+
+import React, { useState } from 'react';
+
 import '../MainJin/MainJin.scss';
 import Nav from '../../../components/Nav/Nav';
+import Comment from '../MainJin/Comment/Comment';
 
 function MainJin() {
   return (
@@ -64,6 +66,25 @@ function Story() {
   );
 }
 function Feed() {
+  const [postedComment, setPostedComment] = useState([]);
+  const [commentInput, setCommentInput] = useState('');
+  const [likeNum, setLikeNum] = useState(0);
+
+  const textingComment = event => {
+    setCommentInput(event.target.value);
+  };
+  const addPostedComment = () => {
+    let postingCommentInput = [...postedComment];
+
+    postingCommentInput.push(commentInput);
+    setPostedComment(postingCommentInput);
+    removeTextingComment();
+  };
+
+  const removeTextingComment = () => {
+    setCommentInput('');
+  };
+
   return (
     <article className="Main__total__feed">
       <div className="Main__total__feed__info">
@@ -112,10 +133,12 @@ function Feed() {
           </span>
         </div>
         <div className="Main__total__feed__board__comment-num">
-          댓글 <span>84</span>개 모두 보기
+          댓글 <span>1</span>개 모두 보기
         </div>
         <ul className="Main__total__feed__board__list">
-          <Comment />
+          {postedComment.map(comment => {
+            return <Comment comment={comment} key={comment.toString()} />;
+          })}
         </ul>
 
         <div className="Main__total__feed__board__date">
@@ -132,7 +155,7 @@ function Feed() {
             type="button"
             className="Main__total__feed__comment__form__icon"
           >
-            <i className="fal fa-smile " />
+            <i className="fal fa-smile" />
           </button>
           <textarea
             className="Main__total__feed__comment__form__textarea"
@@ -141,11 +164,23 @@ function Feed() {
             cols="50"
             rows="5"
             placeholder="댓글 달기..."
+            value={commentInput}
+            onChange={textingComment}
+            onKeyPress={e => {
+              e.key === 'Enter' && addPostedComment();
+              e.key = '';
+            }}
           />
 
           <button
             type="button"
-            className="Main__total__feed__comment__form__btn"
+            className={
+              commentInput.length > 0
+                ? 'Main__total__feed__comment__form__btnOn'
+                : 'Main__total__feed__comment__form__btnOff'
+            }
+            onClick={addPostedComment}
+            disabled={commentInput.length > 0 ? false : true}
           >
             게시
           </button>
@@ -166,44 +201,24 @@ function FeedImages() {
       <div className="Main__total__feed__images__img-box">
         <img
           src="images/hongyoujin/profile_image.jpg"
-          alt=""
+          alt="user profile"
           className="Main__total__feed__images__img-box__img"
         />
         <img
           src="images/hongyoujin/profile_image.jpg"
-          alt=""
+          alt="user profile"
           className="Main__total__feed__images__img-box__img"
         />
         <img
           src="images/hongyoujin/profile_image.jpg"
-          alt=""
+          alt="user profile"
           className="Main__total__feed__images__img-box__img"
         />
       </div>
     </div>
   );
 }
-function Comment() {
-  return (
-    <li className="Main__total__feed__board__list__comment">
-      <div>
-        <span className="Main__total__feed__board__list__comment__name">
-          chobo_coding
-        </span>
-        &nbsp;
-        <span className="Main__total__feed__board__list__comment__text">
-          git, you are so cute !<br />
-        </span>
-      </div>
-      <button
-        type="button"
-        className="Main__total__feed__board__list__comment__like"
-      >
-        <i className="far fa-heart like_heart" />
-      </button>
-    </li>
-  );
-}
+
 function Aside() {
   return (
     <aside className="Main__aside">
@@ -236,7 +251,7 @@ function Profile() {
       <img
         src="images/hongyoujin/profile_image.jpg"
         className="Main__aside__profile__image"
-        alt="profile_image"
+        alt="user profile"
       />
       <div className="Main__aside__profile__info">
         <p className="Main__aside__profile__info__id">chobo_coding</p>
@@ -253,7 +268,7 @@ function Recommend() {
       <img
         src="images/hongyoujin/profile_image.jpg"
         className="Main__aside__recommend__follower__profile__img"
-        alt=""
+        alt="follower recommend"
       />
       <div className="Main__aside__recommend__follower__profile__info">
         <p className="Main__aside__recommend__follower__profile__info__id">

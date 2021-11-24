@@ -48,29 +48,61 @@ function LoginBox() {
   const handlePwInput = event => {
     setPwValue(event.target.value);
   };
+
   const Navigate = useNavigate();
 
   const goToMain = () => {
+    // fetch('http://10.58.5.25:8000/users/signup/', {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     name: '홍유진',
+    //     email: 'hongyoujin@gmail.com',
+    //     password: 'Youjin123@',
+    //     address: '01068591413',
+    //     information: '첫가입자',
+    //   }),
+    // })
+    //   .then(response => response.json())
+    //   .then(result => console.log('결과:', result));
+
+    // fetch('http://10.58.5.25:8000/users/signin/', {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     email: idValue,
+    //     password: pwValue,
+    //   }),
+    // })
+    //   .then(response => response.json())
+    //   .then(result =>
+    //     result.message === 'SUCCESS'
+    //       ? Navigate('/main-jin')
+    //       : console.log('안됨')
+    //   );
+
     Navigate('/main-jin');
   };
+
   return (
     <div className="Login__Article__login-box">
       <h1 className="Login__Article__login-box__logo">Westagram</h1>
-      <form method="post" className="Login__Article__login-box__form">
+      <form className="Login__Article__login-box__form">
         <input
           className="Login__Article__login-box__form__input"
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
+          value={idValue}
           onChange={handleIdInput}
         />
+
         <input
           className="Login__Article__login-box__form__input"
           type="password"
           placeholder="비밀번호"
+          value={pwValue}
           onChange={handlePwInput}
         />
         <button
-          type="submit"
+          type="button"
           className={
             idValue.includes('@') && pwValue.length > 4
               ? 'Login__Article__login-box__form__btnOn'
@@ -104,9 +136,7 @@ function Join() {
   return (
     <div className="Login__Article__join">
       <p className="Login__Article__join__question">계정이 없으신가요?</p>
-      {/* <a href="#"> */}
       <span className="Login__Article__join__link">가입하기</span>
-      {/* </a> */}
     </div>
   );
 }

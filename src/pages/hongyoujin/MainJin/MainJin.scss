@@ -221,28 +221,6 @@
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          &__comment {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 5px;
-            &__name {
-              font-size: 15px;
-              font-weight: bold;
-            }
-            &__text {
-              font-size: 15px;
-            }
-            &__like {
-              border: none;
-              background-color: inherit;
-              cursor: pointer;
-              font-size: 12px;
-              color: rgb(55, 55, 55);
-              &:hover {
-                color: grey;
-              }
-            }
-          }
         }
         &__date {
           &__update {
@@ -257,7 +235,6 @@
         align-items: center;
         &__form {
           width: 100%;
-          /* min-height: 53px; */
           height: 53px;
           display: flex;
           justify-content: space-between;
@@ -267,6 +244,7 @@
             background-color: inherit;
             cursor: pointer;
             padding: 0 16px;
+            font-size: 24px;
           }
           &__textarea {
             width: 500px;
@@ -278,11 +256,19 @@
               outline: none;
             }
           }
-          &__btn {
+          &__btnOn {
             background-color: inherit;
             border: none;
-            color: rgb(132, 164, 186);
-            /* color: rgb(0, 147, 245); */
+            color: rgb(0, 147, 245);
+            font-size: 14px;
+            font-weight: bold;
+            padding: 0 16px;
+            cursor: pointer;
+          }
+          &__btnOff {
+            background-color: inherit;
+            border: none;
+            color: rgb(165, 175, 182);
             font-size: 14px;
             padding: 0 16px;
           }
