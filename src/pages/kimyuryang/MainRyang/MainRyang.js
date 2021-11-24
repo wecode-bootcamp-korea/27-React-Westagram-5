@@ -1,4 +1,5 @@
 import React from 'react';
+// import Nav from './components/Nav/Nav';
 
 function MainRyang() {
   return (
@@ -56,12 +57,7 @@ function MainRyang() {
                 rows="2"
                 placeholder="댓글 달기..."
               />
-              <button
-                id="commentSubmit"
-                type="button"
-                type="submit"
-                class="deactivated"
-              >
+              <button id="commentSubmit" type="button" class="deactivated">
                 게시
               </button>
             </div>

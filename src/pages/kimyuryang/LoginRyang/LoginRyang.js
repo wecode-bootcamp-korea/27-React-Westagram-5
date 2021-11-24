@@ -1,32 +1,46 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../LoginRyang/LginRyang.scss';
+import '../LoginRyang/LoginRyang.scss';
 
 function LoginRyang() {
-  const Navigate = useNavigate();
-  const goToMain = () => {
-    Navigate('/MainRyag.js');
-  };
-
-  const [loginActive, setLoginActive] = useState('');
+  const [loginActive, setLoginActive] = useState(false);
 
   const [idValue, setIdValue] = useState('');
   const [pwValue, setPwValue] = useState('');
 
-  const activeLoginBtn = idValue === '' || pwValue === '';
   const inputValue = idValue.includes('@') && pwValue.length > 4;
-  const activeLoginBtn = () => {
+  const a = () => {
     return setLoginActive(inputValue);
   };
 
   const handleId = e => {
     const { value } = e.target;
-    setIdInput(value);
+    setIdValue(value);
   };
 
   const handlePw = e => {
     const { value } = e.target;
-    setPwInput(value);
+    setPwValue(value);
+  };
+
+  const navigate = useNavigate();
+
+  const goToMain = () => {
+    fetch('API주소', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: idValue,
+        password: pwValue,
+      }),
+    })
+      .then(res => res.json())
+      .then(result => {
+        if ('access_token' in result) {
+          navigate('/main-ryang');
+        } else {
+          alert('dddddd');
+        }
+      });
   };
 
   return (
@@ -42,7 +56,7 @@ function LoginRyang() {
                 id="id"
                 type="text"
                 onChange={handleId}
-                onKeyUp
+                onKeyUp={a}
                 placeholder="전화번호, 사용자 이름 또는 이메일"
               />
             </label>
@@ -50,18 +64,17 @@ function LoginRyang() {
               <input
                 id="password"
                 type="password"
-                Onchange={handlePw}
-                onKeyUp
+                onChange={handlePw}
+                onKeyUp={a}
                 placeholder="비밀번호"
               />
             </label>
 
             <button
-              type="submit"
-              className="loginBtn"
+              type="button"
+              className={loginActive ? 'activeOn' : 'activeOff'}
               onClick={goToMain}
-              disabled={activeLoginBtn ? true : false} 
-              fectch
+              disabled={loginActive ? false : true}
             >
               로그인
             </button>
