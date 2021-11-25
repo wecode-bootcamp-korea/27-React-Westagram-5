@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../MainRyang/MainRyang.scss';
 import Nav from '../../../components/Nav/Nav';
+import '../MainRyang/MainRyang.scss';
 
 function MainRyang() {
   const [comment, setComment] = useState([]);
@@ -12,68 +12,79 @@ function MainRyang() {
   };
 
   const updateComment = () => {
-    let arrayCopy = [...comment];
+    let arrayCopy = [...comment, {...}];
     comment.unshift(submitComment);
     setSubmitComment(arrayCopy);
-  };
+  }; 
+  // concat 사용해보기 댓글 안에 id 내용 좋아요 실제 댓글 내용 인풋에 들어갈건데
+  // 그냥 el 형태로 들어가면 찾기 힘듦 
+  // 객체로 바꿔서 넣어보기 
+  // 배열 안에 객체 추가 
+  // {댓글} {userid }
+
 
   return (
-    <div class="mainRyang">
+    <div className="mainRyang">
       <Nav />
-      <div class="feeds">
-        <div class="feedsAccountArea">
+      <div className="feeds">
+        <div className="feedsAccountArea">
           <img
             src="images/kimyuryang/otherprofile.png"
             className="otherProfile"
             alt="계정 사진"
+            // 검색할 때 걸리는 검색어를 alt 속성으로 찾는다. 
           />
-          <div class="userName">
-            <span class="userNickName">y.raeng_</span>
+          <div className="userName">
+            <span className="userNickName">y.raeng_</span>
             <p>・・・</p>
           </div>
         </div>
 
-        <article class="photo" />
+        <article className="photo" />
 
-        <div class="feedsUnderArea">
-          <div class="feedsUnderCommentArea">
-            <i class="fas fa-heart" />
-            <i class="far fa-comment" />
-            <i class="far fa-paper-plane" />
-            <i class="far fa-bookmark" />
+        <div className="feedsUnderArea">
+          <div className="feedsUnderCommentArea">
+            <i className="fas fa-heart" />
+            <i className="far fa-comment" />
+            <i className="far fa-paper-plane" />
+            <i className="far fa-bookmark" />
           </div>
 
-          <div class="feedsLikes">
+          <div className="feedsLikes">
             <i class="fas fa-user-circle" />
-            <span class="feedsLikesAccount">anieworld</span>
+            <span className="feedsLikesAccount">anieworld</span>
             <p> 님</p>
-            <span class="feedsLikesCount">외 10명</span>
+            <span className="feedsLikesCount">외 10명</span>
             <p>이 좋아합니다.</p>
           </div>
 
-          <div class="commentArea">
-            <ul class="commentContent">
-              <li class="commentId">0_z0</li>
-              <li class="comment">무보정 실화?...</li>
+          <div className="commentArea">
+            <ul className="commentContent">
+              <li className="commentId">0_z0</li>
+              <li className="comment">무보정 실화?...</li>
             </ul>
-            <ul class="commentPart2">
-              <li class="moreComment">더 보기</li>
-              <li class="commentTime">42분 전</li>
-              <li class="heartIcon">
-                <i class="far fa-heart" />
+            <ul className="commentPart">
+              <li className="moreComment">더 보기</li>
+              <li className="commentTime">42분 전</li>
+              <li className="heartIcon">
+                <i className="far fa-heart" />
               </li>
             </ul>
           </div>
 
-          <div class="commentsRepleArea">
-            <div class="commentRow">
+          <div className="commentsRepleArea">
+            <div className="commentRow">
               <input
-                id="newComment"
+                value = "newComment"
+                className="newComment"
                 name="newComment"
                 onChange={handleComment}
                 placeholder="댓글 달기..."
+                //input의 value가 있고 없고 차이 
+                //value를 추적해서 input 값을 컨트롤 할 수 있다. 
+                //제어컴포넌트 react 공식 문서 form에 대해서 읽어보기 forms.html
               />
-              <button id="commentSubmit" type="button" onClick={updateComment}>
+              <button className="commentSubmit" type="button" onClick={updateComment}>
                 게시
               </button>
             </div>
@@ -81,26 +92,26 @@ function MainRyang() {
         </div>
       </div>
 
-      <div class="mainRightArea">
-        <div class="myAccount">
-          <ul class="myAccountArea">
-            <li class="myAccountImage" />
-            <li class="myAccountId">RyangO_O</li>
-            <li class="myAccountIntroduce">27기 위코더</li>
+      <div className="mainRightArea">
+        <div className="myAccount">
+          <ul className="myAccountArea">
+            <li className="myAccountImage" />
+            <li className="myAccountId">RyangO_O</li>
+            <li className="myAccountIntroduce">27기 위코더</li>
           </ul>
         </div>
 
-        <div class="mainRightStories">
-          <div class="storiesProfile">
-            <ul class="storiesUl1">
+        <div className="mainRightStories">
+          <div className="storiesProfile">
+            <ul className="storiesUl1">
               <li>스토리</li>
-              <li class="storiesMoreProfile">모두보기</li>
+              <li className="storiesMoreProfile">모두보기</li>
             </ul>
 
-            <ul class="storiesUl2">
-              <li class="storiesPhoto" />
-              <li class="storiesId">_Help</li>
-              <li class="storiesTime">16분 전</li>
+            <ul className="storiesUl2">
+              <li className="storiesPhoto" />
+              <li className="storiesId">_Help</li>
+              <li className="storiesTime">16분 전</li>
             </ul>
           </div>
         </div>
