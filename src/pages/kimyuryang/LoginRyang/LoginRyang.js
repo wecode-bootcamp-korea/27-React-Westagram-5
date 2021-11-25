@@ -43,6 +43,16 @@ function LoginRyang() {
       });
   };
 
+  //fetch(‘http://10.58.4.242:8000/users/signin’, {
+  //method: ‘POST’,
+  //body: JSON.stringify({
+  //email: idValue,
+  //password: pwValue,
+  // name: ‘김민혁’,
+  // email: ‘komhgogogo@gmail.com’,
+  // password: ‘Rlaalsgur1@’,
+  // phone_number: ‘01012341234’,
+
   return (
     <div className="Login">
       <div className="container">
