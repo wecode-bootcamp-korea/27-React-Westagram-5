@@ -26,7 +26,7 @@ function Nav() {
             <i className="fal fa-compass" />
             <i className="fal fa-heart" />
             <img
-              src="./images/hongyoujin/profile_image.jpg"
+              src="./images/kimyuryang/profile.png"
               className="Nav__bar__menu__icons__img"
               alt="porfileImage"
             />
@@ -36,4 +36,5 @@ function Nav() {
     </div>
   );
 }
+
 export default Nav;

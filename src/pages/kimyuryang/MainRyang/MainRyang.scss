@@ -1,390 +1,223 @@
-header {
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  padding: 20px 0 20px 0;
-  border: 2px solid rgb(226, 226, 226);
-}
+@import '/src/styles/variables.scss';
 
-input {
-  outline: none;
-}
-
-/* 헤더 왼쪽 로고 영역 */
-
-.headerLogoArea {
-  display: flex;
-  align-items: center;
-  padding-top: 15px;
-  width: 250px;
-}
-
-.logoImg {
-  display: inline-block;
-  margin-right: 10px;
-  width: 30px;
-  height: 30px;
-  background-image: url('../image/instagram.png');
-  background-size: cover;
-}
-
-h1 {
-  display: inline-block;
-  font-family: 'Lobster', cursive;
-  font-weight: lighter;
-  font-size: xx-large;
-  text-align: center;
-}
-
-h1::before {
-  padding-right: 10px;
-  font-size: large;
-  content: '|';
-  color: black;
-}
-
-/* 헤더 중간 서치 영역 */
-.headerSearchBarArea {
-  position: relative;
-  padding: 15px 300px 15px 300px;
-}
-
-.fa-search {
-  font-size: 15px;
-  position: absolute;
-  top: 33px;
-  left: 401px;
-  color: #36363679;
-}
-
-#headerSearchBar {
-  padding: 3px 70px 5px 70px;
-  margin-top: 5px;
-  /* background-color: rgba(214, 214, 214, 0.2); */
-  border: 2px solid rgb(226, 226, 226);
-  text-align: center;
-  line-height: 30px;
-}
-
-::placeholder {
-  padding-top: 2px;
-  font-size: large;
-  color: #36363679;
-}
-
-/* 헤더 오른쪽 아이콘 영역 */
-.headerIconsArea {
-  display: flex;
-  padding-right: 45px;
-}
-
-/* = .headerIconsArea .a  파비콘처럼 class명 두개를 지정해서 둘 수도 있다.   */
-.headerIconsArea div {
-  margin: 15px 10px 0 20px;
-  /* line-height: 10px; */
-}
-
-.exploreImg {
-  width: 30px;
-  height: 31px;
-  background-size: contain;
-  background-image: url(../image/explore.png);
-}
-
-.heartImg {
-  width: 32px;
-  height: 30px;
-  background-size: cover;
-  background-image: url(../image/heart.png);
-}
-
-.profileImg {
-  width: 30px;
-  height: 30px;
-  background-size: contain;
-  background-image: url(../image/profile.png);
-}
-
-/* 메인 */
-.main {
-  padding: 80px 0 80px 0px;
+.mainRyang {
+  padding: 130px 0 80px 0px;
   width: auto;
   max-width: 1245px;
-  transform: translateX(40%);
-}
+  transform: translateX(20%);
 
-.feeds {
-  width: 780px;
-  height: auto;
-}
+  .feeds {
+    width: 780px;
+    height: auto;
 
-/* 댓글 넘침 방지 height 설정 추가 하면 창이 늘어나는 함수를 나중에 만들어야 하나?*/
-/* .feedsUnderCommentArea{
-  height: 250px;
-  background-color: yellow;
-} */
+    .feedsAccountArea {
+      position: relative;
+      justify-content: left;
+      padding-top: 80px;
+      border: $border;
+      background-color: white;
 
-/* 피즈 계정 영역 */
-.feedsAccountArea {
-  position: relative;
-  justify-content: left;
-  padding-top: 80px;
-  border: 1px solid rgb(194, 194, 194);
-  background-color: white;
-}
+      .otherProfile {
+        top: 20px;
+        left: 20px;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: $border;
+      }
+      .userName p {
+        position: absolute;
+        top: 25px;
+        left: 720px;
+        font-size: xx-large;
+      }
+    }
+    .photo {
+      width: 780px;
+      height: 680px;
+      background-image: '/src/assets/images/cloud.png';
+      background-size: cover;
+      overflow: hidden;
+    }
 
-.feedsAccountArea img {
-  top: 20px;
-  left: 20px;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 1px solid rgb(194, 194, 194);
-}
+    .feedsUnderArea {
+      border: $border;
+      padding-top: 15px;
+      background-color: white;
 
-.feedsAccountArea p {
-  position: absolute;
-  top: 27px;
-  left: 85px;
-  font-weight: bolder;
-  font-size: x-large;
-}
+      .feedsUnderAreaIcons {
+        padding: 0 20px 5px 10px;
+        font-size: 1.8rem;
 
-.feedsAccountArea p:last-child {
-  position: absolute;
-  top: 25px;
-  left: 720px;
-  font-size: xx-large;
-}
+        i:nth-child(-n + 3) {
+          margin-right: 10px;
+        }
 
-/* 피즈 사진 영역 */
-.photo {
-  width: 780px;
-  height: 680px;
-  background-image: url(../image/cloud.jpg);
-  background-size: cover;
-  overflow: hidden;
-}
+        .fa-bookmark {
+          padding-left: 580px;
+        }
+      }
+    }
+    .feedsLikes {
+      display: flex;
+      padding: 10px 0 0 12px;
 
-/* 피즈 사진 하단 아이콘 영역*/
-.feedsUnderArea {
-  border: 1px solid rgb(194, 194, 194);
-  padding-top: 15px;
-  background-color: white;
-}
+      .feedsLikesCount {
+        padding-left: 5px;
+      }
 
-.feedsUnderAreaIcons {
-  padding: 0 20px 5px 10px;
-  font-size: 1.8rem;
-}
+      .feedsLikesAccount,
+      .feedsLikesCount {
+        font-weight: bold;
+        font-size: large;
+      }
+    }
 
-.feedsUnderAreaIcons > i:nth-child(-n + 3) {
-  margin-right: 10px;
-}
+    .commentArea {
+      padding: 10px 20px 7px 15px;
+      font-size: large;
+      border-bottom: 1px solid rgb(194, 194, 194);
 
-.fa-bookmark {
-  padding-left: 580px;
-}
+      .commentContent {
+        display: flex;
+        position: relative;
 
-/* 님 외  */
-.feedsLikes {
-  display: flex;
-  padding: 10px 0 0 12px;
-}
+        .commentId {
+          font-weight: bold;
+        }
+      }
 
-.fa-user-circle {
-  font-size: 1.6rem;
-  padding-right: 10px;
-}
+      .commentPart2 {
+        display: flex;
+        justify-content: space-between;
+        width: 737px;
 
-#feedsLikesAccount,
-#feedsLikesCount {
-  font-weight: bold;
-  font-size: large;
-}
+        .moreComment {
+          color: #36363679;
+          margin-top: 5px;
+        }
 
-#feedsLikesCount {
-  padding-left: 5px;
-}
+        .commentTime {
+          position: absolute;
+          top: 20px;
+          left: 10px;
 
-/* 댓글 내용 */
-/* 댓글 새로 추가되면 틀 안에 들어가야하므로 높이 설정해줘야함 댓글 토탈창 */
-.commentArea {
-  padding: 10px 20px 7px 15px;
-  font-size: large;
-  border-bottom: 1px solid rgb(194, 194, 194);
-}
+          display: flex;
+          margin-left: auto;
 
-.commentContent {
-  display: flex;
-  position: relative;
-}
+          font-size: large;
+          color: #36363679;
+        }
 
-.commentId {
-  font-weight: bold;
-}
+        .heartIcon {
+          padding: 2px;
+        }
+      }
+    }
+    .commentsRepleArea {
+      input {
+        display: inline;
+        padding: 20px 0 0 40px;
+        border: 0;
+        outline: 0;
+        resize: none;
+        font-size: x-large;
+      }
 
-.comment {
-  display: flex;
-  text-align: end;
-  padding-left: 10px;
-  font-size: large;
-}
+      button {
+        transform: translate(120%, -120%);
+        outline: 0;
+        border: 0;
+        font-size: large;
+        color: #499ee9;
+        background-color: white;
+        cursor: pointer;
+      }
+      input + button.deactivated {
+        color: #c4e1fb;
+        cursor: text;
+      }
+    }
+    .mainRightArea {
+      position: absolute;
+      top: 70px;
+      right: 2%;
+      width: 390px;
+      padding-bottom: 100px;
 
-.moreComment {
-  color: #36363679;
-  margin-top: 5px;
-}
+      .myAccountImage {
+        background-image: '/src/assets/images/profile2.png';
+        background-size: cover;
+        border-radius: 50%;
+        border: 3px solid red;
+        width: 80px;
+        height: 80px;
+        transform: translate(20%, 20%);
+      }
+      .myAccountId {
+        transform: translate(30%, -200%);
+        font-weight: bold;
+        font-size: large;
+        color: black;
+      }
+      .myAccountIntroduce {
+        transform: translate(30%, -210%);
+        color: #36363679;
+        font-size: large;
+      }
+    }
+    .mainRightStories {
+      border: 2px solid rgb(194, 194, 194);
+      background-color: white;
+      margin-top: 30px;
 
-.commentTime {
-  position: absolute;
-  top: 20px;
-  left: 10px;
+      .storiesProfile {
+        padding: 10px;
 
-  display: flex;
-  margin-left: auto;
+        .storiesUi1 {
+          .storiesUl1:first-child {
+            display: flex;
+            justify-content: space-between;
+            color: #36363679;
+            font-weight: bold;
+          }
 
-  font-size: large;
-  color: #36363679;
-}
+          .storiesMoreProfile {
+            justify-content: space-between;
+            color: black;
+          }
+        }
 
-.commentPart2 {
-  display: flex;
-  justify-content: space-between;
-  width: 737px;
-}
+        .storiesUl2 {
+          position: relative;
+          margin-top: 20px;
 
-/* display는 부모요소에게 */
-.heartIcon {
-  padding: 2px;
-}
+          .storiesUl2 li {
+            display: inline-block;
+            line-height: 35px;
+            vertical-align: text-top;
+          }
+          .storiesPhoto {
+            background-image: '/src/assets/images/profile3.png';
+            background-size: cover;
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            border: 3px solid red;
+          }
+          .storiesId {
+            font-weight: bold;
+          }
 
-/* 댓글 달기, 게시 폼 */
-
-#newComment {
-  display: inline;
-  padding: 20px 0 0 40px;
-  border: 0;
-  outline: 0;
-  resize: none;
-  font-size: x-large;
+          .storiesTime {
+            position: absolute;
+            bottom: 0;
+            left: 65px;
+          }
+        }
+      }
+    }
+  }
 }
-
-#commentSubmit {
-  transform: translate(120%, -120%);
-  outline: 0;
-  border: 0;
-  font-size: large;
-  color: #499ee9;
-  background-color: white;
-  cursor: pointer;
-}
-
-#newComment + #commentSubmit.deactivated {
-  color: #c4e1fb;
-  cursor: text;
-}
-
-/* 오른쪽 영역 */
-.mainRightArea {
-  position: absolute;
-  top: 70px;
-  right: 2%;
-  width: 390px;
-  padding-bottom: 100px;
-}
-
-#myAccountImage {
-  background-image: url(/image/profile2.png);
-  background-size: cover;
-  border-radius: 50%;
-  border: 3px solid red;
-  width: 80px;
-  height: 80px;
-  transform: translate(20%, 20%);
-}
-
-#myAccountId {
-  transform: translate(30%, -200%);
-  font-weight: bold;
-  font-size: large;
-  color: black;
-}
-
-#myAccountIntroduce {
-  transform: translate(30%, -210%);
-  color: #36363679;
-  font-size: large;
-}
-
-/* 스토리*/
-.mainRightStories {
-  border: 2px solid rgb(194, 194, 194);
-  background-color: white;
-  margin-top: 30px;
-}
-
-.storiesProfile {
-  padding: 10px;
-}
-.storiesUl1:first-child {
-  display: flex;
-  justify-content: space-between;
-  color: #36363679;
-  font-weight: bold;
-}
-.storiesMoreProfile {
-  justify-content: space-between;
-  color: black;
-}
-
-.storiesUl2 {
-  position: relative;
-  margin-top: 20px;
-}
-.storiesUl2 li {
-  display: inline-block;
-  line-height: 35px;
-  vertical-align: text-top;
-}
-/* span tag라서 블록 요소화 */
-/* boder outline 차이 boder 는 부피 차지 값이 있는데 outline은 영향을 미치지 않는다. */
-.storiesPhoto {
-  background-image: url(/image/profile3.png);
-  background-size: cover;
-  width: 60px;
-  height: 60px;
-  border-radius: 50px;
-  border: 3px solid red;
-}
-
-.storiesId {
-  font-weight: bold;
-}
-
-.storiesTime {
-  position: absolute;
-  bottom: 0;
-  left: 65px;
-}
-
-/* .Recommands{
-  border: 2px solid rgb(194, 194, 194);
-  background-color: white;
-} */
-/* >는 바로 자식요소 띄어쓰기는 자식요소 전부 */
-/* 
-footer > ul > li > a {
-  color: rgb(162, 162, 162);
-}
-
-footer > ul > li > a:after {
-  content: "•";
-  font-size: small;
-}
-
-.footer > ul > li:last-child a:after {
-  content: " ";
-} */
