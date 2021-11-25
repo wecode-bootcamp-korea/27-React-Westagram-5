@@ -5,11 +5,16 @@ import Nav from '../../../components/Nav/Nav';
 function MainRyang() {
   const [comment, setComment] = useState([]);
   const [submitComment, setSubmitComment] = useState('');
-  const [submitHeart, setSubmitHeart] = useState(<i class="far fa-heart" />);
 
   const handleComment = e => {
-    const { value } = e.target;
+    let { value } = e.target;
     setComment(value);
+  };
+
+  const updateComment = () => {
+    let arrayCopy = [...comment];
+    comment.unshift(submitComment);
+    setSubmitComment(arrayCopy);
   };
 
   return (
@@ -18,7 +23,7 @@ function MainRyang() {
       <div class="feeds">
         <div class="feedsAccountArea">
           <img
-            src="image/kimyurynag/otherprofile.png"
+            src="images/kimyuryang/otherprofile.png"
             className="otherProfile"
             alt="계정 사진"
           />
@@ -68,15 +73,7 @@ function MainRyang() {
                 onChange={handleComment}
                 placeholder="댓글 달기..."
               />
-              <button
-                id="commentSubmit"
-                type="button"
-                onClick={() => {
-                  let arrayCopy = [...comment];
-                  comment.unshift(submitComment);
-                  setComment(arrayCopy);
-                }}
-              >
+              <button id="commentSubmit" type="button" onClick={updateComment}>
                 게시
               </button>
             </div>

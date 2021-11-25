@@ -27,17 +27,24 @@
         border-radius: 50%;
         border: $border;
       }
-      .userName p {
+      .userNickName {
         position: absolute;
         top: 25px;
-        left: 720px;
-        font-size: xx-large;
+        left: 80px;
+        font-size: x-large;
+
+        > p {
+          position: absolute;
+          top: 25px;
+          left: 250px;
+          font-weight: bolder;
+        }
       }
     }
     .photo {
       width: 780px;
       height: 680px;
-      background-image: '/src/assets/images/cloud.png';
+      background-image: url('../../../assets/images/cloud.png');
       background-size: cover;
       overflow: hidden;
     }
