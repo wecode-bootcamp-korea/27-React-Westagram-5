@@ -4,12 +4,13 @@ import '../LoginRyang/LoginRyang.scss';
 
 function LoginRyang() {
   const [loginActive, setLoginActive] = useState(false);
-
+  const navigate = useNavigate();
   const [idValue, setIdValue] = useState('');
   const [pwValue, setPwValue] = useState('');
 
   const inputValue = idValue.includes('@') && pwValue.length > 4;
-  const a = () => {
+
+  const valueActive = () => {
     return setLoginActive(inputValue);
   };
 
@@ -22,8 +23,6 @@ function LoginRyang() {
     const { value } = e.target;
     setPwValue(value);
   };
-
-  const navigate = useNavigate();
 
   const goToMain = () => {
     fetch('API주소', {
@@ -38,7 +37,7 @@ function LoginRyang() {
         if ('access_token' in result) {
           navigate('/main-ryang');
         } else {
-          alert('dddddd');
+          alert('아이디 비밀번호를 다시 입력해주세요.');
         }
       });
   };
@@ -57,29 +56,30 @@ function LoginRyang() {
     <div className="Login">
       <div className="container">
         <div className="logoSection">
-          <h1>westagram</h1>
+          <h1 className="h1">westagram</h1>
         </div>
         <section className="loginForm">
           <form name="loginInAction" action="login.js" method="post">
             <label for="id">
               <input
-                id="id"
+                value="" // state 만들기
+                className="id"
                 type="text"
                 onChange={handleId}
-                onKeyUp={a}
+                onKeyUp={valueActive}
                 placeholder="전화번호, 사용자 이름 또는 이메일"
               />
             </label>
             <label for="password">
               <input
-                id="password"
+                value="" //state만들기m
+                className="password"
                 type="password"
                 onChange={handlePw}
-                onKeyUp={a}
+                onKeyUp={valueActive}
                 placeholder="비밀번호"
               />
             </label>
-
             <button
               type="button"
               className={loginActive ? 'activeOn' : 'activeOff'}

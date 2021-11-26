@@ -1,14 +1,14 @@
 @import '/src/styles/variables.scss';
 
-.mainRyang {
-  padding: 130px 0 80px 0px;
+.MainRyang {
+  padding: 130px 0 80px 0;
   width: auto;
   max-width: 1245px;
-  transform: translateX(20%);
 
   .feeds {
     width: 780px;
     height: auto;
+    margin-left: 300px;
 
     .feedsAccountArea {
       position: relative;
@@ -27,20 +27,22 @@
         border-radius: 50%;
         border: $border;
       }
-      .userNickName {
+
+      .userName {
         position: absolute;
         top: 25px;
         left: 80px;
         font-size: x-large;
+      }
 
-        > p {
-          position: absolute;
-          top: 25px;
-          left: 250px;
-          font-weight: bolder;
-        }
+      .moreUserInfo {
+        position: absolute;
+        top: 25px;
+        left: 720px;
+        font-weight: bolder;
       }
     }
+
     .photo {
       width: 780px;
       height: 680px;
@@ -55,15 +57,11 @@
       background-color: white;
 
       .feedsUnderAreaIcons {
-        padding: 0 20px 5px 10px;
-        font-size: 1.8rem;
-
-        i:nth-child(-n + 3) {
-          margin-right: 10px;
-        }
+        padding: 30px 0 5px 10px;
+        font-size: 1.3rem;
 
         .fa-bookmark {
-          padding-left: 580px;
+          padding-left: 730px;
         }
       }
     }
@@ -93,6 +91,11 @@
 
         .commentId {
           font-weight: bold;
+          padding-right: 10px;
+        }
+        .heartIcon {
+          padding: 2px;
+          padding-left: 555px;
         }
       }
 
@@ -100,9 +103,10 @@
         display: flex;
         justify-content: space-between;
         width: 737px;
+        // background-color: ;
 
         .moreComment {
-          color: #36363679;
+          color: #9b9b9b;
           margin-top: 5px;
         }
 
@@ -110,52 +114,38 @@
           position: absolute;
           top: 20px;
           left: 10px;
-
           display: flex;
           margin-left: auto;
-
           font-size: large;
-          color: #36363679;
-        }
-
-        .heartIcon {
-          padding: 2px;
+          color: #9b9b9b;
         }
       }
     }
-    .commentsRepleArea {
-      input {
-        display: inline;
+    .inputCommentArea {
+      .newComment {
+        // display: inline;
         padding: 20px 0 0 40px;
         border: 0;
         outline: 0;
         resize: none;
-        font-size: x-large;
+        font-size: large;
+        &::placeholder {
+          color: #9b9b9b;
+        }
       }
-
-      button {
-        transform: translate(120%, -120%);
+      .commentButton {
+        transform: translate(1000%, -40%);
         outline: 0;
         border: 0;
         font-size: large;
-        color: #499ee9;
+        color: #c4e1fb;
         background-color: white;
         cursor: pointer;
       }
-      input + button.deactivated {
-        color: #c4e1fb;
-        cursor: text;
-      }
     }
     .mainRightArea {
-      position: absolute;
-      top: 70px;
-      right: 2%;
-      width: 390px;
-      padding-bottom: 100px;
-
       .myAccountImage {
-        background-image: '/src/assets/images/profile2.png';
+        background-image: url('/assets/images/profile2.png');
         background-size: cover;
         border-radius: 50%;
         border: 3px solid red;
@@ -171,25 +161,23 @@
       }
       .myAccountIntroduce {
         transform: translate(30%, -210%);
-        color: #36363679;
+        color: #9b9b9b;
         font-size: large;
       }
     }
     .mainRightStories {
-      border: 2px solid rgb(194, 194, 194);
+      border: $border;
       background-color: white;
       margin-top: 30px;
 
       .storiesProfile {
         padding: 10px;
 
-        .storiesUi1 {
-          .storiesUl1:first-child {
-            display: flex;
-            justify-content: space-between;
-            color: #36363679;
-            font-weight: bold;
-          }
+        .storiesUi1 :first-child {
+          display: flex;
+          justify-content: space-between;
+          color: #36363679;
+          font-weight: bold;
 
           .storiesMoreProfile {
             justify-content: space-between;
@@ -206,14 +194,16 @@
             line-height: 35px;
             vertical-align: text-top;
           }
+
           .storiesPhoto {
-            background-image: '/src/assets/images/profile3.png';
+            background-image: url('/assets/images/profile3.png');
             background-size: cover;
             width: 60px;
             height: 60px;
             border-radius: 50px;
             border: 3px solid red;
           }
+
           .storiesId {
             font-weight: bold;
           }
