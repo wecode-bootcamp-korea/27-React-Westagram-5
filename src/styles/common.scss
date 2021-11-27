@@ -21,3 +21,10 @@ body {
     “Ubuntu”, “Cantarell”, “Fira Sans”, “Droid Sans”, “Helvetica Neue”,
     sans-serif;
 }
+
+@mixin flex-center($flex-direction: center, $justify-content: center) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: center;
+  justify-content: $justify-content;
+}

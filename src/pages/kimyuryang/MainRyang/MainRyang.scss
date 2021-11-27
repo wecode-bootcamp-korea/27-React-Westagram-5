@@ -1,0 +1,220 @@
+@import '/src/styles/variables.scss';
+
+.MainRyang {
+  padding: 130px 0 80px 0;
+  width: auto;
+  max-width: 1245px;
+
+  .feeds {
+    width: 780px;
+    height: auto;
+    margin-left: 300px;
+
+    .feedsAccountArea {
+      position: relative;
+      justify-content: left;
+      padding-top: 80px;
+      border: $border;
+      background-color: white;
+
+      .otherProfile {
+        top: 20px;
+        left: 20px;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: $border;
+      }
+
+      .userName {
+        position: absolute;
+        top: 25px;
+        left: 80px;
+        font-size: x-large;
+      }
+
+      .moreUserInfo {
+        position: absolute;
+        top: 25px;
+        left: 720px;
+        font-weight: bolder;
+      }
+    }
+
+    .photo {
+      width: 780px;
+      height: 680px;
+      background-image: url('../../../assets/images/cloud.png');
+      background-size: cover;
+      overflow: hidden;
+    }
+
+    .feedsUnderArea {
+      border: $border;
+      padding-top: 15px;
+      background-color: white;
+
+      .feedsUnderAreaIcons {
+        padding: 30px 0 5px 10px;
+        font-size: 1.3rem;
+
+        .fa-bookmark {
+          padding-left: 730px;
+        }
+      }
+    }
+    .feedsLikes {
+      display: flex;
+      padding: 10px 0 0 12px;
+
+      .feedsLikesCount {
+        padding-left: 5px;
+      }
+
+      .feedsLikesAccount,
+      .feedsLikesCount {
+        font-weight: bold;
+        font-size: large;
+      }
+    }
+
+    .commentArea {
+      padding: 10px 20px 7px 15px;
+      font-size: large;
+      border-bottom: 1px solid rgb(194, 194, 194);
+
+      .commentContent {
+        display: flex;
+        position: relative;
+
+        .commentId {
+          font-weight: bold;
+          padding-right: 10px;
+        }
+        .heartIcon {
+          padding: 2px;
+          padding-left: 555px;
+        }
+      }
+
+      .commentPart {
+        display: flex;
+        justify-content: space-between;
+        width: 737px;
+        // background-color: ;
+
+        .moreComment {
+          color: #9b9b9b;
+          margin-top: 5px;
+        }
+
+        .commentTime {
+          position: absolute;
+          top: 20px;
+          left: 10px;
+          display: flex;
+          margin-left: auto;
+          font-size: large;
+          color: #9b9b9b;
+        }
+      }
+    }
+    .inputCommentArea {
+      .newComment {
+        // display: inline;
+        padding: 20px 0 0 40px;
+        border: 0;
+        outline: 0;
+        resize: none;
+        font-size: large;
+        &::placeholder {
+          color: #9b9b9b;
+        }
+      }
+      .commentButton {
+        transform: translate(1000%, -40%);
+        outline: 0;
+        border: 0;
+        font-size: large;
+        color: #c4e1fb;
+        background-color: white;
+        cursor: pointer;
+      }
+    }
+    .mainRightArea {
+      .myAccountImage {
+        background-image: url('/assets/images/profile2.png');
+        background-size: cover;
+        border-radius: 50%;
+        border: 3px solid red;
+        width: 80px;
+        height: 80px;
+        transform: translate(20%, 20%);
+      }
+      .myAccountId {
+        transform: translate(30%, -200%);
+        font-weight: bold;
+        font-size: large;
+        color: black;
+      }
+      .myAccountIntroduce {
+        transform: translate(30%, -210%);
+        color: #9b9b9b;
+        font-size: large;
+      }
+    }
+    .mainRightStories {
+      border: $border;
+      background-color: white;
+      margin-top: 30px;
+
+      .storiesProfile {
+        padding: 10px;
+
+        .storiesUi1 :first-child {
+          display: flex;
+          justify-content: space-between;
+          color: #36363679;
+          font-weight: bold;
+
+          .storiesMoreProfile {
+            justify-content: space-between;
+            color: black;
+          }
+        }
+
+        .storiesUl2 {
+          position: relative;
+          margin-top: 20px;
+
+          .storiesUl2 li {
+            display: inline-block;
+            line-height: 35px;
+            vertical-align: text-top;
+          }
+
+          .storiesPhoto {
+            background-image: url('/assets/images/profile3.png');
+            background-size: cover;
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            border: 3px solid red;
+          }
+
+          .storiesId {
+            font-weight: bold;
+          }
+
+          .storiesTime {
+            position: absolute;
+            bottom: 0;
+            left: 65px;
+          }
+        }
+      }
+    }
+  }
+}
